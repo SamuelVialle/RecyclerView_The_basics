@@ -38,6 +38,7 @@ public class MyRecyclerHorizontalAdapter extends RecyclerView.Adapter<MyRecycler
 
     @Override
     public void onBindViewHolder(@NonNull MyRecyclerHorizontalAdapter.MyViewHolder holder, int position) {
+        position = holder.getAdapterPosition();
         holder.tvTitle.setText(interns[position]);
         holder.ivAvatar.setImageResource(avatars[position]);
     }
@@ -51,6 +52,7 @@ public class MyRecyclerHorizontalAdapter extends RecyclerView.Adapter<MyRecycler
 
         private TextView tvTitle;
         private ImageView ivAvatar;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tv_title);

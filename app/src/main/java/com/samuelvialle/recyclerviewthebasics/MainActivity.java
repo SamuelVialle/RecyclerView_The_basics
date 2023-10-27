@@ -7,11 +7,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-
-    // VARS
+    /**
+     * Attributs globaux
+     **/
     private RecyclerView rvVertical, rvHorizontal;
+    /**
+     * Déclaration des tableaux de String
+     **/
     private String[] interns, descriptions;
-
+    /**
+     * Déclaration du tableau des images
+     **/
     private int[] avatars = {
             R.drawable.stagiaire_01,
             R.drawable.stagiaire_02,
@@ -29,22 +35,28 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.stagiaire_014
     };
 
+    /**
+     * Méthode pour initialiser le design et les données avec le code
+     **/
     private void init(){
         rvVertical = findViewById(R.id.rv_vertical);
         rvHorizontal = findViewById(R.id.rv_horizontal);
+        // Liens vers les tableaux du fichier strings
         interns = getResources().getStringArray(R.array.interns);
         descriptions = getResources().getStringArray(R.array.descriptions);
     }
 
     private void fillRecyclerVertical(){
+        // Ajout d'un nouveau LinearLayout pour contenir les vues du RecyclerView
+        // On peut alors choisir l'orientation vertical ou horizontal et inverser la sélection
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
                 this, LinearLayoutManager.VERTICAL, false);
-
+        // Ajout du linearLayoutManager au recyclerView
         rvVertical.setLayoutManager(linearLayoutManager);
-
+        // Déclaration de l'adapter
         MyRecyclerVerticalAdapter adapter = new MyRecyclerVerticalAdapter(
                 this,interns, descriptions, avatars);
-
+        // Ajout de l'adapteur au recyclerView
         rvVertical.setAdapter(adapter);
     }
 
@@ -63,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /** Appel des méthodes **/
         init();
         fillRecyclerVertical();
         fillRecyclerHorizontal();
