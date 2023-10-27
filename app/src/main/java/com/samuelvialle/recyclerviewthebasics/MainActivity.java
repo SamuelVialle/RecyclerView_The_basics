@@ -9,7 +9,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     // VARS
-    private RecyclerView rvVertical;
+    private RecyclerView rvVertical, rvHorizontal;
     private String[] interns, descriptions;
 
     private int[] avatars = {
@@ -31,20 +31,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void init(){
         rvVertical = findViewById(R.id.rv_vertical);
+        rvHorizontal = findViewById(R.id.rv_horizontal);
         interns = getResources().getStringArray(R.array.interns);
         descriptions = getResources().getStringArray(R.array.descriptions);
     }
 
     private void fillRecyclerVertical(){
-        MyRecyclerVerticalAdapter adapter = new MyRecyclerVerticalAdapter(
-                this,interns, descriptions, avatars);
-
-        rvVertical.setAdapter(adapter);
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
                 this, LinearLayoutManager.VERTICAL, false);
 
         rvVertical.setLayoutManager(linearLayoutManager);
+
+        MyRecyclerVerticalAdapter adapter = new MyRecyclerVerticalAdapter(
+                this,interns, descriptions, avatars);
+
+        rvVertical.setAdapter(adapter);
+    }
+
+    private void fillRecyclerHorizontal(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(
+                this, LinearLayoutManager.HORIZONTAL, false);
+        rvHorizontal.setLayoutManager(linearLayoutManager);
+
+        MyRecyclerHorizontalAdapter adapter = new MyRecyclerHorizontalAdapter(
+                this, interns, avatars);
+        rvHorizontal.setAdapter(adapter);
+
     }
 
     @Override
@@ -53,5 +65,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         init();
         fillRecyclerVertical();
+        fillRecyclerHorizontal();
     }
 }
