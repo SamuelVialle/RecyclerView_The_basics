@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">RecyclerView The basics</string>
+    
+    <string-array name="interns">
+        <item>David 1 </item>
+        <item>Naoufel</item>
+        <item>Stalenes</item>
+        <item>Laureline</item>
+        <item>Nadia</item>
+        <item>Didier</item>
+        <item>Simon</item>
+        <item>Rima</item>
+        <item>David 2</item>
+        <item>Naziha</item>
+        <item>Jérôme</item>
+        <item>Ali</item>
+        <item>Khadim</item>
+        <item>Samuel</item>
+    </string-array>
+
+<string-array name="descriptions">
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ex sem, efficitur eget posuere at, mollis sit amet dolor.</item>
+</string-array>
+
+</resources>
